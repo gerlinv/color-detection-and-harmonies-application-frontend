@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Color Detection and Harmonies",
+    "slug": "color-detection-and-harmonies",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/pantone.png",
+    "splash": {
+      "image": "./assets/pantone-splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/pantone.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/pantone.png"
+    }
+  }
+}
