@@ -7,7 +7,7 @@ from pictures and find how harmonious two chosen colors are.
 To start the frontend application type the following in your
 terminal:
 ```
-npm install (only if you're running the application for the first time!)
+npm install #only if you're running the application for the first time!
 expo start
 ```
 If you want to use the application on your phone replace API_URL in
