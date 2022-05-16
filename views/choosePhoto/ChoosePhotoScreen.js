@@ -55,7 +55,7 @@ const ChoosePhotoScreen = (props) => {
                 </Button>
                 <View style={Styles.space}/>
                 <Button mode="contained"
-                        onPress={() => props.navigation.navigate('Saved Colors', {deletable: false, color1: previousColor})}>
+                        onPress={() => props.navigation.navigate('Saved Colors', {editable: false, color1: previousColor})}>
                     Saved colors
                 </Button>
                 <View style={Styles.space}/>

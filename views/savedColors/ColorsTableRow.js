@@ -8,7 +8,7 @@ import Color from '../../components/Color';
 import {updateColorById} from "./ApiRequest";
 
 const ColorsTableRow = (props) => {
-    const {deletable, row} = props;
+    const {editable, row} = props;
 
     const [comment, setComment] = useState(row.comment ? row.comment : '');
     const [savedComment, setSavedComment] = useState(row.comment);
@@ -42,26 +42,26 @@ const ColorsTableRow = (props) => {
 
     const handleUseButton = () => {
         props.navigate(new Color({
-                        'name': row.name, 'hue': row.hue,
-                        'rgb': row.rgb, 'date': row.date,
-                        'comment': row.comment
-                    }));
+            'name': row.name, 'hue': row.hue,
+            'rgb': row.rgb, 'date': row.date,
+            'comment': row.comment
+        }));
     }
 
     const displayButtons = (row) => (
         <View style={Styles.buttonContainer}>
-            {deletable && <Button style={Styles.buttonStyle}
+            {editable && <Button style={Styles.buttonStyle}
                                   labelStyle={Styles.buttonText}
                                   disabled={editCommentDisabled}
                                   mode="contained"
                                   uppercase={false}
                                   onPress={() => updateColorComment()}>Edit</Button>}
-            <Button style={!deletable ? Styles.oneButton : Styles.buttonStyle}
+            <Button style={!editable ? Styles.oneButton : Styles.buttonStyle}
                     labelStyle={Styles.buttonText}
                     mode="contained"
                     uppercase={false}
                     onPress={handleUseButton}>Use</Button>
-            {deletable && <Button style={Styles.buttonStyle}
+            {editable && <Button style={Styles.buttonStyle}
                                   labelStyle={Styles.buttonText}
                                   mode="contained"
                                   uppercase={false}
@@ -98,12 +98,14 @@ const ColorsTableRow = (props) => {
                     style={Styles.commentInput}
                     multiline={true}
                     maxLength={150}
-                    disabled={!deletable}
+                    disabled={!editable}
                     mode="outlined"
                     label="Comment"
                     value={comment}
                     onChangeText={(text) => commentHandler(text)}
                 />
+            </View>
+            <View style={!editable ? Styles.centerContainer : ''}>
                 {displayButtons(row)}
             </View>
         </View>

@@ -8,7 +8,7 @@ export default class HomeScreen extends Component {
     render() {
         return (
             <View style={Styles.viewContainer}>
-                <Headline style={Styles.headline}>Color Detection and Harmony Application</Headline>
+                <Headline style={Styles.headline}>Color Detection and Harmonies Application</Headline>
                 <View style={Styles.space}/>
                 <View style={Styles.buttonsContainer}>
                     <Button mode="contained"
@@ -17,7 +17,7 @@ export default class HomeScreen extends Component {
                     </Button>
                     <View style={Styles.space}/>
                     <Button mode="contained"
-                            onPress={() => this.props.navigation.navigate('Saved Colors', {deletable: true})}>
+                            onPress={() => this.props.navigation.navigate('Saved Colors', {editable: true})}>
                         Saved colors
                     </Button>
                     <View style={Styles.space}/>

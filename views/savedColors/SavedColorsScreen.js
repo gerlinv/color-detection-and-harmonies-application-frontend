@@ -7,8 +7,8 @@ import {deleteColorById, getColors} from './ApiRequest';
 import Styles from './Styles';
 import Harmony from "../../components/Harmony";
 
-const ColorsScreen = (props) => {
-    const {deletable, color1} = props.route.params;
+const SavedColorsScreen = (props) => {
+    const {editable, color1} = props.route.params;
 
     const [colors, setColors] = useState(undefined);
     const [visible, setVisible] = useState(false);
@@ -65,7 +65,7 @@ const ColorsScreen = (props) => {
                             Color deleted!
                         </Snackbar>
                         <ScrollView>
-                            <ColorsTable deletable={deletable}
+                            <ColorsTable editable={editable}
                                          colors={colors}
                                          deleteColor={deleteColor}
                                          navigate={navigateToNextScreen}/>
@@ -96,4 +96,4 @@ const ColorsScreen = (props) => {
     );
 }
 
-export default ColorsScreen;
+export default SavedColorsScreen;

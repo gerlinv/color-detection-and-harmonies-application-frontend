@@ -1,4 +1,4 @@
-# Color Detection and Harmony App Frontend
+# Color Detection and Harmonies App Frontend
 
 An application which makes it possible to identify colors
 from pictures and find how harmonious two chosen colors are.

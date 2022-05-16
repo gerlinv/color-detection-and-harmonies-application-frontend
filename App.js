@@ -2,11 +2,11 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from './views/home/HomeScreen';
-import ColorsScreen from './views/colors/ColorsScreen';
+import SavedColorsScreen from './views/savedColors/SavedColorsScreen';
 import ChoosePhotoScreen from './views/choosePhoto/ChoosePhotoScreen';
 import PhotoScreen from './views/photo/PhotoScreen';
-import HarmoniesScreen from './views/harmonies/HarmoniesScreen'
-import SavedHarmoniesScreen from './views/saved/SavedHarmoniesScreen'
+import HarmoniesScreen from './views/harmonies/HarmoniesScreen';
+import SavedHarmoniesScreen from './views/savedHarmonies/SavedHarmoniesScreen';
 import {DefaultTheme, IconButton, Provider as PaperProvider} from 'react-native-paper';
 import AboutScreen from './views/about/AboutScreen';
 import {LogBox} from "react-native";
@@ -55,7 +55,7 @@ function MyStack() {
             )
         })}>
             <Stack.Screen name="Home" component={HomeScreen}/>
-            <Stack.Screen name="Saved Colors" component={ColorsScreen}/>
+            <Stack.Screen name="Saved Colors" component={SavedColorsScreen}/>
             <Stack.Screen name="Choose a photo" component={ChoosePhotoScreen}/>
             <Stack.Screen name="Chosen photo" component={PhotoScreen}/>
             <Stack.Screen name="Harmonies" component={HarmoniesScreen}/>

@@ -10,13 +10,13 @@ export default class ColorsTable extends Component {
         this.state = {
             tableHead: ['Color', 'RGB', 'Date', '', ''],
             tableData: this.props.colors,
-            deletable: this.props.deletable
+            editable: this.props.editable
         }
     }
 
     static getDerivedStateFromProps(nextProps, prevState) {
         if (nextProps.colors !== prevState.colors) {
-            return {tableData: nextProps.colors, deletable: nextProps.deletable};
+            return {tableData: nextProps.colors, editable: nextProps.editable};
         } else return null;
     }
 
@@ -33,7 +33,7 @@ export default class ColorsTable extends Component {
                 <View style={Styles.colorsTableContainer}>
                     {this.state.tableData.map((row) => (
                         <View key={row.id}>
-                            <ColorsTableRow deletable={this.state.deletable}
+                            <ColorsTableRow editable={this.state.editable}
                                             row={row}
                                             deleteColor={deleteColor}
                                             navigate={navigate}/>
